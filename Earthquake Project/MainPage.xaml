@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Earthquake_Project.MainPage"
+             Shell.NavBarIsVisible="False">
+
+    <ScrollView>
+        <VerticalStackLayout 
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <StackLayout Margin="0,-150,0,0">
+                <Image Source="earthquakeproject.png"
+                       SemanticProperties.Description="Crumbling City Image"
+                       HeightRequest="350"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Start"/>
+            </StackLayout>
+            <HorizontalStackLayout Spacing="150" HorizontalOptions="Center" Margin="0,0,0,-20">
+                <Label Text="Start Date"
+                       FontSize="16"
+                       FontFamily="PoppinsSemiBold"
+                       HorizontalOptions="Center"/>
+                
+                <Label Text="End Date"
+                       FontSize="16"
+                       FontFamily="PoppinsSemiBold"
+                       HorizontalOptions="Center"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="25" HorizontalOptions="Center">
+                <Entry x:Name="LblStartDate"
+                       Placeholder="Enter Start Date"
+                       HorizontalTextAlignment="Center"
+                       MinimumHeightRequest="20"
+                       HeightRequest="30"
+                       WidthRequest="200"
+                       FontSize="14"
+                       FontFamily="PoppinsBold"
+                       Keyboard="Numeric"
+                       IsTextPredictionEnabled="False"/>
+
+                <Entry x:Name="LblEndDate"
+                       Placeholder="Enter Start Date"
+                       HorizontalTextAlignment="Center"
+                       MinimumHeightRequest="20"
+                       HeightRequest="30"
+                       WidthRequest="200"
+                       FontSize="14"
+                       FontFamily="PoppinsBold"
+                       Keyboard="Numeric"
+                       IsTextPredictionEnabled="False"/>
+            </HorizontalStackLayout>
+
+            <StackLayout Margin="0,0,0,0" Spacing="7">
+                <Label Text="Earthquake Size (1-10)"
+                       FontSize="16"
+                       FontFamily="PoppinsSemiBold"
+                       HorizontalOptions="Center"/>
+                
+                <Entry x:Name="LblQuakeSize"
+                       Placeholder="Enter End Date"
+                       HorizontalTextAlignment="Center"
+                       MinimumHeightRequest="20"
+                       HeightRequest="30"
+                       WidthRequest="200"
+                       FontSize="14"
+                       FontFamily="PoppinsBold"
+                       Keyboard="Numeric"
+                       IsTextPredictionEnabled="False"/>
+            </StackLayout>
+
+            <StackLayout>
+                <Button x:Name="BtnFind"
+                        Text="Search"
+                        FontFamily="PoppinsSemiBold"
+                        WidthRequest="400"
+                        BackgroundColor="#893943"
+                        Clicked="BtnFind_Clicked"/>
+            </StackLayout>
+
+            <StackLayout Padding="0,20,0,-40" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label x:Name="LblEarthquakeResults"
+                       FontSize="14"
+                       FontFamily="PoppinsSemiBold"/>
+            </StackLayout>
+
+            <StackLayout Padding="0,30,0,-50" HorizontalOptions="Center"  VerticalOptions="Center">
+                <Label x:Name="LblDetails"
+                       FontSize="14"
+                       FontFamily="PoppinsSemiBold"/>
+                
+            </StackLayout>
+                
+
+            
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
